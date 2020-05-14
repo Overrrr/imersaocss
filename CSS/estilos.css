@@ -1,0 +1,178 @@
+/*soft reset do css*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+      font-size: 10px;
+  }
+
+  /*Se a minha tela tem no minimo 400px vai carregar estes estilos*/ 
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+}
+  }
+/* breakpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+}
+  }
+
+  /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+}
+  }
+
+  header {
+    background-image: url("../img/fundo.jpg");
+    background-size: auto 200vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: #1c1e1f;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+
+    }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1.2s, color 1.2s;
+  }
+  .menu a:active,
+  .menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
+
+  }
+
+  .titulo {
+    transform: scale(0.2) translatey(10vh);
+    opacity: 0;
+    animation: linear 1.5s animacaotitulo forwards;
+  }
+
+  @keyframes animacaotitulo {
+    from {
+      transform: scale(0.2) translateY(10vh);
+    }
+
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .site-subtitle,
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 4em;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+    line-height: 1.8em;
+  }
+  .contato,
+  .portfolio {
+    background-color: #1c1e1f;
+    padding: 2em;
+    min-height: 100vh;
+    color: whitesmoke;
+  }
+
+  .contato h2,
+  .portfolio h2 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    height: 70;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 4em - 48px);
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.2);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active, 
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 8px whitesmoke;
+  }
