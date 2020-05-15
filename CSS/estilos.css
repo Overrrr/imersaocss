@@ -110,18 +110,44 @@ body {
     font-style: italic;
     line-height: 1.8em;
   }
+
+  .sobre,
   .contato,
   .portfolio {
     background-color: #1c1e1f;
     padding: 2em;
     min-height: 100vh;
     color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .contato h2,
-  .portfolio h2 {
-    margin-bottom: 1em;
+  @media (min-width: 1200px) {
+   .container {
+    margin-left: auto;
+    margin-right: auto;
+   }
+  }
+
+  .contato h2 {
+   margin-bottom: 7em;
+   text-align: center;
+  }
+
+  .sobre h2 {
+    margin-bottom: 4em;
     text-align: center;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  .sobre p{
+    text-indent: 1.7em;
+    margin-bottom: 1.6em;
+    text-align: justify;
   }
 
   .portfolio .grid {
@@ -149,6 +175,18 @@ body {
     text-align: center;
   }
 
+  .sobre .avatar img {
+   height: 240px;
+   width: 240px;
+   border-radius: 50%;
+  }
+
+  .sobre .avatar {
+    float: left;
+    margin-right: 2em;
+    
+    }
+
   .img-portfolio {
     height: 180px;
     width: 240px;
@@ -158,7 +196,7 @@ body {
   }
 
   .img-portfolio:hover {
-    transform: scale(1.2);
+    transform: scale(1.33);
   }
 
   .contato .icons {
@@ -167,7 +205,7 @@ body {
 
   .contato a {
     color: whitesmoke;
-    font-size: 4em;
+    font-size: 5em;
     transition: text-shadow 1s;
   }
 
@@ -176,3 +214,5 @@ body {
     text-decoration: none;
     text-shadow: 0px 0px 8px whitesmoke;
   }
+
+
